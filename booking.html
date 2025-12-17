@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking | DJ Bolox</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .booking {
+      max-width: 500px;
+      margin: 5% auto;
+      padding: 2rem;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 0 20px var(--primary);
+    }
+    .booking h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    .booking label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    .booking input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .booking button {
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 0.8rem;
+      background: var(--primary);
+      border: none;
+      color: var(--white);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .booking button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="booking">
+    <h1>Booking Request</h1>
+    <form id="bookingForm">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" required>
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Your request has been submitted successfully. We will get back to you soon. If we don't, you are free to make a follow-up using a phone call.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
