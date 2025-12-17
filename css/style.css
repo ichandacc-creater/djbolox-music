@@ -193,4 +193,49 @@ body {
   color: var(--primary);
 }
 
+.music-options {
+  text-align: center;
+  padding: 2rem;
+}
+
+.music-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.music-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--white);
+  background: var(--primary);
+  box-shadow: 0 0 12px rgba(36, 74, 107, 0.6);
+  transition: all 0.3s ease;
+}
+
+.music-btn span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0.3rem;
+  color: #ddd;
+}
+
+.music-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(36, 74, 107, 0.9);
+}
+
+.full-song {
+  background: #244A6B; /* deep blue */
+}
+
+.instrumental {
+  background: #111; /* dark contrast */
+}
 
