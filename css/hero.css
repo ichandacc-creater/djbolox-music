@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../images/main-image.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keep content centered */
+  color: var(--white);
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7); /* Black overlay */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  transform: translateX(10%); /* nudges text slightly more to the right */
+}
+
+.glow-text {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+}

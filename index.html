@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DJ Bolox | Producer</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Your existing styles -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/hero.css"/>
+
+  <!-- Inline modal styles to ensure the booking form works immediately -->
+  <style>
+    :root {
+      --primary: #244A6B;
+      --black: #000000;
+      --white: #FFFFFF;
+    }
+    /* Booking Modal */
+    .modal {
+      display: none; /* hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background: var(--white);
+      color: var(--black);
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 0 20px var(--primary);
+    }
+    .modal-content h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+    .modal-content label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    .modal-content input {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .modal-content .book-btn {
+      width: 100%;
+      margin-top: 1.2rem;
+      padding: 0.8rem 1.6rem;
+      background: var(--primary);
+      border: none;
+      color: var(--white);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .modal-content .book-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+    .close {
+      float: right;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary);
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="glow-text">DJ Bolox</h1>
+      <p class="quote">“Okay you act like you don't know me”</p>
+      <div class="hero-buttons">
+     <div class="hero-buttons"> <a href="booking.html" class="book-btn">Book Now</a>
+        <a class="listen-btn" href="https://https://open.spotify.com/artist/3pReSrSWXqNFypFR5BpLGJ?si=uj7_LEgjR_mLlpun_DB06A" target="_blank" rel="noopener">🎧 Listen</a>
+      </div>
+      <p class="phone">📞 +260 973 936 356</p>
+    </div>
+  </header>
+
+  <!-- Info Bar -->
+  <section class="info-bar">
+    <div class="card">🎵 Full Audio <span>3,000</span></div>
+    <div class="card">🎹 Instrumentals <span>K2,000</span></div>
+    <div class="card">📧 Email <span>chisha.mpemba@gmail.com</span></div>
+    <div class="card">
+      <i class="fab fa-youtube"></i>
+      <a href="https://www.youtube.com/@djbolox" target="_blank" rel="noopener">@djbolox</a>
+    </div>
+    <div class="card">
+      <i class="fab fa-facebook"></i>
+      <a href="https://facebook.com/share/19hKtu7K4D" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </section>
+<!-- About Preview -->
+<section class="about">
+  <h2>About DJ Bolox</h2>
+  <p>
+    DJ Bolox has been producing music since <strong>2011</strong>, earning a reputation as one of Zambia’s most consistent and innovative producers. 
+    He has collaborated with leading artists such as <strong>Vinchenzo, Xaven, Chef 187, and Umusepela Crown</strong>, delivering beats that have shaped the sound of modern Zambian music. 
+    His mission is to craft productions that inspire and elevate artists worldwide.
+  </p>
+  <a href="about.html" class="btn">Read More</a>
+  
+</section>
+
+
+
+
+  <!-- Services Preview -->
+  <section class="services">
+    <h2>Services</h2>
+    <div id="services-list"></div>
+    <a href="services.html" class="btn">View All Services</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>DJ Bolox</h3>
+        <p>Producer since 2011 | Zambia</p>
+      </div>
+      <div class="footer-center">
+        <p>📞 +260 973 936 356</p>
+        <p>📧 chisha.mpemba@gmail.com</p>
+      </div>
+      <div class="footer-right">
+        <p>
+          <i class="fab fa-youtube"></i>
+          <a href="https://www.youtube.com/@djbolox" target="_blank" rel="noopener">@djbolox</a>
+        </p>
+        <p>
+          <i class="fab fa-facebook"></i>
+          <a href="https://facebook.com/share/19hKtu7K4D" target="_blank" rel="noopener">Facebook</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 DJ Bolox. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" aria-label="Close">&times;</span>
+      <h2>Booking request</h2>
+      <form id="bookingForm">
+        <label for="artistName">Artist name</label>
+        <input type="text" id="artistName" name="artistName" placeholder="Enter your artist name" required/>
+
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+260 7XX XXX XXX" required/>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+
+        <button type="submit" class="book-btn">Submit request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts: keep your existing loaders, plus inline modal logic to ensure it works -->
+  <script src="js/dataLoader.js">
